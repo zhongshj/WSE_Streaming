@@ -3,6 +3,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import mannwhitneyu
+import math
 
 df = pd.read_csv("task2_data.csv")
 
@@ -29,12 +30,24 @@ u,pvalue_e = mannwhitneyu(r_e,ir_e)
 u,pvalue_eT = mannwhitneyu(r_eT,ir_eT)
 u,pvalue_tP = mannwhitneyu(r_tP,ir_tP)
 u,pvalue_s = mannwhitneyu(r_s,ir_s)
+print pvalue_s
 
+#print pvalue_eT
+#r_s.plot(kind='hist',title='Relevant')
+#plt.show()
+#ir_s.plot(kind='hist',title='Non-relevant')
+#plt.show()
+#r_tP.plot(kind='box',logy=True,label='Relevant')
+#plt.show()
+#ir_tP.plot(kind='box',logy=True,label='Non-relevant')
+#plt.show()
 #boxplot
-fig = plt.figure(1,figsize=(9,6))
-ax = fig.add_subplot(111)
-ax.set_xticklabels(['Relevant', 'Non-relevant'])
-bp = ax.boxplot([r_e,ir_e],labels=('Relevant','Non-relevant'))
-plt.show()
+
+#fig = plt.figure(1,figsize=(9,6))
+#ax = fig.add_subplot(111)
+#ax.set_xticklabels(['Relevant', 'Non-relevant'])
+#bp = ax.boxplot([r_tP,ir_tP],labels=('Relevant','Non-relevant'))
+#ax.set_yscale("log")
+#plt.show()
 
 

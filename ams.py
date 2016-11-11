@@ -33,7 +33,6 @@ class StdOutListener(StreamListener):
 				and location[1]>geobox_schipol[1]
 				and location[1]<geobox_schipol[3]):
 				file_sch.write(data)
-				file_sch.write(data)
 		except:
 			pass
 
